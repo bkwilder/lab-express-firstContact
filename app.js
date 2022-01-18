@@ -2,8 +2,6 @@ const express = module.require('express');
 
 
 const app = express();
-
-//var publicDir = require('path').join('/images'); 
 app.use(express.static('images')); 
 
 const PORT = 1337
@@ -18,7 +16,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/puppies', (req, res) => {
-    res.send(`<img src = puppies.jpeg>`);
+    res.send(`<img src = puppies.jpeg width="50%" height="50%">`);
 });
 
 app.get('/kittens', (req, res) => {
